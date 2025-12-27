@@ -26,17 +26,8 @@ const uniqueId = `typing-${Math.random().toString(36).substr(2, 9)}`;
 </Tag>
 
 <style>
-  .typing-text {
-    font-family: var(--font-display);
-    display: inline-block;
-  }
-
-  .typing-content {
-    display: inline-block;
-  }
-
   .typing-cursor {
-    display: inline-block;
+    display: inline;
     color: var(--accent-primary);
     animation: blink 1s step-end infinite;
     margin-left: 2px;
@@ -50,11 +41,6 @@ const uniqueId = `typing-${Math.random().toString(36).substr(2, 9)}`;
   @media (prefers-reduced-motion: reduce) {
     .typing-cursor {
       animation: none;
-      opacity: 1;
-    }
-
-    .typing-content {
-      /* Show full text immediately for reduced motion */
       opacity: 1;
     }
   }
