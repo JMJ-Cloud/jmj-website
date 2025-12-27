@@ -1,6 +1,6 @@
 ---
-// resume.astro
-// Resume page - Company portfolio and expertise
+// portfolio.astro
+// Portfolio page - Company project showcase
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
@@ -15,15 +15,15 @@ const completedProjects = sortedProjects.filter(p => p.data.status === 'Complete
 ---
 
 <BaseLayout
-  title="Resume"
-  description="JMJ Cloud team portfolio, recent projects, and technical expertise in Oracle solutions."
-  currentPath="/resume"
+  title="Portfolio"
+  description="JMJ Cloud project portfolio showcasing Oracle solutions and technical expertise across industries."
+  currentPath="/portfolio"
 >
-  <section class="resume-listing">
+  <section class="portfolio-listing">
     <div class="container">
-      <header class="resume-header">
-        <h1 class="resume-title">Company Portfolio</h1>
-        <p class="resume-description">
+      <header class="portfolio-header">
+        <h1 class="portfolio-title">Our Portfolio</h1>
+        <p class="portfolio-description">
           Oracle expertise delivering enterprise solutions across industries
         </p>
       </header>
@@ -73,21 +73,21 @@ const completedProjects = sortedProjects.filter(p => p.data.status === 'Complete
 </BaseLayout>
 
 <style>
-  .resume-listing {
+  .portfolio-listing {
     padding: var(--space-12) 0 var(--space-20);
   }
 
-  .resume-header {
+  .portfolio-header {
     text-align: center;
     margin-bottom: var(--space-16);
   }
 
-  .resume-title {
+  .portfolio-title {
     font-size: var(--text-3xl);
     margin-bottom: var(--space-4);
   }
 
-  .resume-description {
+  .portfolio-description {
     font-family: var(--font-display);
     font-size: var(--text-lg);
     color: var(--text-secondary);
