@@ -165,8 +165,6 @@ const latestProjects = [
 
   .hero-tagline {
     font-family: var(--font-display);
-    font-size: calc(var(--text-xl) * 2);
-    color: #0066ff;
     margin-bottom: var(--space-6);
   }
 
@@ -366,5 +364,17 @@ const latestProjects = [
     .capabilities-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+</style>
+
+<style is:global>
+  p.hero-tagline {
+    font-size: 2.5rem !important;
+    color: var(--accent-primary) !important;
+  }
+
+  p.hero-tagline .typing-content,
+  p.hero-tagline .typing-cursor {
+    color: var(--accent-primary) !important;
   }
 </style>
