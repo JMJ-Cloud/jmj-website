@@ -303,6 +303,46 @@ Shipping minimal JavaScript dramatically improved performance metrics while stil
 **AI-Assisted Development**
 Claude Code accelerated development while maintaining high quality, proving that AI can be an effective partner for professional software development.
 
+## Lessons Learned
+
+### Hosting Platform Evolution: From Netlify to GitHub Pages
+
+Our deployment journey provides valuable insights into platform selection and cost management:
+
+**Initial Approach: Netlify**
+We initially deployed to Netlify for several compelling reasons:
+- Seamless Git integration with automatic deployments
+- Generous free tier for static sites
+- Built-in CDN and SSL certificates
+- Easy custom domain configuration
+- Excellent developer experience
+
+Netlify worked perfectly for our needs and provided a smooth deployment experience. However, as a small consultancy, we needed to be mindful of our operational costs.
+
+**The Transition: Moving to GitHub Pages**
+After exhausting our Netlify free tier credits, we evaluated our options and chose GitHub Pages:
+
+**Why GitHub Pages Made Sense:**
+- **100% Free:** No bandwidth limits or build minute restrictions for public repositories
+- **Native Git Integration:** Direct deployment from our existing GitHub repository
+- **GitHub Actions:** Full control over build process with customizable workflows
+- **Simplicity:** Fewer moving parts - repository, build, and hosting all in one platform
+- **Reliability:** Backed by GitHub's infrastructure and uptime guarantees
+- **Open Source Friendly:** Perfect for showcasing open development practices
+
+**Technical Migration:**
+The switch was straightforward:
+1. Created GitHub Actions workflow for automated Astro builds
+2. Renamed repository to `jmj-cloud.github.io` for root URL hosting
+3. Removed base path configuration from `astro.config.mjs`
+4. Configured GitHub Pages to deploy from GitHub Actions
+5. Push to main now triggers automatic build and deployment
+
+**Key Takeaway:**
+For static sites like ours built with Astro, GitHub Pages provides everything needed without ongoing costs. While Netlify offers additional features (edge functions, form handling, split testing), our requirements fit perfectly within GitHub Pages' capabilities. This decision demonstrates our commitment to cost-effective solutions and reinforces our philosophy of choosing appropriate tools for each use case.
+
+The experience also highlighted the importance of platform flexibility - building with standard web technologies (Astro, TypeScript, static HTML/CSS) meant switching hosting platforms required minimal code changes.
+
 ## Looking Forward
 
 As we continue developing the JMJ Cloud website, we're focused on:
