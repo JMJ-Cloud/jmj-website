@@ -8,7 +8,10 @@ technologies:
   - "Oracle EBS R12.2"
   - "Oracle Database"
 industry: "Manufacturing"
-metrics: []
+metrics:
+  - "Multiple conversion modules in UAT"
+  - "Automated validation & error detection"
+  - "Real-time conversion progress tracking"
 featured: true
 order: 12
 ---
