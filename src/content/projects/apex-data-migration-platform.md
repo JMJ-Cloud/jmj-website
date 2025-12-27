@@ -13,7 +13,7 @@ metrics:
   - "Automated validation & error detection"
   - "Real-time conversion progress tracking"
 featured: true
-order: 12
+order: 1
 ---
 
 ## Project Overview
